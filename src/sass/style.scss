@@ -12,6 +12,26 @@ body {
   color: $color-primary;
 }
 
+.logo {
+  display: inline-block;
+  height: 70px;
+  width: 200px;
+  line-height: 70px;
+  font-size: 30px;
+  font-family: $font-secondary;
+  text-align: center;
+  color: $color-primary;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: url("../img/logo.svg") 0 0 no-repeat;
+
+  &--dark {
+    color: $color-secondary;
+    background-image: url("../img/logo-dark.svg");
+  }
+}
+
 .button {
   display: inline-block;
   padding: 7px 20px;
@@ -77,13 +97,6 @@ body {
     @media (min-width: $screen-lg) {
       text-align: left;
     }
-  }
-
-  &__logo-link {
-    display: inline-block;
-    height: 70px;
-    width: 200px;
-    background: url("../img/logo.png") 0 0 no-repeat;
   }
 
   &__menu-toggler {
@@ -688,13 +701,6 @@ body {
     @media (min-width: $screen-xl) {
       text-align: left;
     }
-  }
-
-  &__logo-image {
-    display: inline-block;
-    height: 70px;
-    width: 200px;
-    background: url("../img/logo-gray.png") 0 0 no-repeat;
   }
 
   &__address {
