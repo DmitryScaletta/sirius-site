@@ -207,7 +207,7 @@ body {
 
   &__nav {
     display: none;
-    padding-bottom: 26px;
+    padding-bottom: 9px;
 
     &--expanded {
       display: block;
@@ -251,6 +251,29 @@ body {
     position: relative;
     color: $color-secondary;
 
+    &:hover {
+      .nav__nested {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &--nested {
+      &:hover {
+        &::before {
+          content: "";
+          display: none;
+          position: absolute;
+          left: calc(50% - 5px);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 5px 5px 0;
+          border-color: $color-secondary transparent transparent;
+        }
+      }
+    }
+
     &::after {
       @extend %nav-dot;
     }
@@ -262,8 +285,28 @@ body {
     }
 
     @media (min-width: $screen-md) {
+      &--nested {
+        &:hover {
+          &::before {
+            display: block;
+            top: 40px;
+          }
+        }
+      }
+
       display: inline-block;
       margin: 0;
+      padding-bottom: 17px;
+    }
+
+    @media (min-width: $screen-lg) {
+      &--nested {
+        &:hover {
+          &::before {
+            top: 52px;
+          }
+        }
+      }
     }
   }
 
@@ -291,6 +334,72 @@ body {
     @media (min-width: $screen-xl) {
       padding: 11px 24px;
       margin: 0 22px;
+    }
+  }
+
+  &__nested {
+    padding: 6px;
+    list-style: none;
+    font-size: 12px;
+    text-align: center;
+    transition: opacity $transition-duration $transition-function;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      margin: 12px 0 0 7px;
+      font-size: 15px;
+      text-align: left;
+      background: $color-secondary;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin: 17px 0 0 13px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin: 17px 0 0 22px;
+    }
+  }
+
+  &__nested-item {
+    font-weight: $font-primary-regular;
+
+    @media (min-width: $screen-md) {
+      border: 1px solid $color-primary;
+      border-top: none;
+      border-bottom: none;
+
+      &:first-child {
+        padding-top: 10px;
+        border-top: 1px solid $color-primary;
+      }
+
+      &:last-child {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $color-primary;
+      }
+    }
+  }
+
+  &__nested-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: $color-secondary;
+    text-decoration: none;
+    transition: color $transition-duration $transition-function;
+
+    &:hover {
+      color: lighten($color-primary, 60%);
+    }
+
+    @media (min-width: $screen-md) {
+      color: $color-primary;
+
+      &:hover {
+        color: darken($color-primary, 20%);
+      }
     }
   }
 }
