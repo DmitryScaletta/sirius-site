@@ -1,0 +1,45 @@
+{
+  "name": "sirius-site",
+  "version": "0.0.1",
+  "homepage": "https://dmitryscaletta.github.io/sirius-site",
+  "description": "",
+  "main": "",
+  "browserslist": "last 15 versions",
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "DmitryScaletta",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-compat": "^1.0.2",
+    "eslint-plugin-import": "^2.2.0",
+    "gh-pages": "^0.12.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-cache": "^0.4.6",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-inline-source": "^3.1.0",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "imagemin-pngquant": "^5.0.0",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "dependencies": {
+    "moveto": "^1.6.1"
+  }
+}
