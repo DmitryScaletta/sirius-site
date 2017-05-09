@@ -1,4 +1,5 @@
 const gulp         = require('gulp');
+const gulpsync     = require('gulp-sync')(gulp);
 
 const sass         = require('gulp-sass');
 const csso         = require('gulp-csso');
@@ -117,7 +118,7 @@ gulp.task('fonts', () => {
 
 gulp.task('clean', () => del.sync('dist'));
 
-gulp.task('build', ['clean', 'markup', 'styles', 'scripts', 'images', 'fonts']);
+gulp.task('build', gulpsync.sync(['clean', 'scripts', ['styles', 'images', 'fonts', 'markup']]));
 
 gulp.task('default', ['build']);
 

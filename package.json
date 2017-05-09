@@ -34,6 +34,7 @@
     "gulp-inline-source": "^3.1.0",
     "gulp-merge-media-queries": "^0.2.1",
     "gulp-sass": "^3.1.0",
+    "gulp-sync": "^0.1.4",
     "gulp-uglify": "^2.1.2",
     "imagemin-pngquant": "^5.0.0",
     "stylelint": "^7.10.1",
