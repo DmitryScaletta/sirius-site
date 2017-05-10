@@ -84,7 +84,7 @@ body {
   }
 
   &__logo {
-    @include grid-column(10, md 12, lg 3);
+    @include grid-column(10, md 12, lg 3, mx 2);
 
     padding-bottom: 20px;
     text-align: left;
@@ -124,7 +124,7 @@ body {
   }
 
   &__address {
-    @include grid-column(12, md 4, lg 3);
+    @include grid-column(12, md 4, lg 3, mx 4);
 
     display: none;
     padding-top: 15px;
@@ -140,6 +140,10 @@ body {
     @media (min-width: $screen-md) {
       display: block;
       text-align: left;
+    }
+
+    @media (min-width: $screen-mx) {
+      padding-left: 81px;
     }
   }
 
