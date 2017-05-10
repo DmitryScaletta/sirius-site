@@ -65,12 +65,25 @@ body {
   z-index: 1;
 
   &__inner {
-    background: url("../img/header-bg.jpg") 50% 0;
+    background: #737373;
   }
 
   &__overlay {
-    background: rgba(white, 0.4);
+    position: relative;
+    z-index: 1;
     box-shadow: 0 10px 20px rgba(#000, 0.3);
+
+    &::after {
+      content: "";
+      background: url("../img/header-bg.jpg") 50% 0;
+      opacity: 0.4;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
   }
 
   &__top {
