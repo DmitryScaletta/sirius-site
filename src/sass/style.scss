@@ -859,7 +859,7 @@ body {
   &__copyright-wrapper {
     @include grid-column(12, sm 6);
 
-    padding-top: 5px;
+    padding-top: 3px;
     text-align: center;
 
     @media (min-width: $screen-sm) {
@@ -871,6 +871,6 @@ body {
     display: inline-block;
     width: 86px;
     height: 16px;
-    background: url("../img/copyright.png") 100% 0 no-repeat;
+    background: url("../img/logo-art6.svg") 100% 0 no-repeat;
   }
 }
