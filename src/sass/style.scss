@@ -869,6 +869,7 @@ body {
     @include grid-column(12, sm 6);
 
     padding-top: 3px;
+    font-size: 0;
     text-align: center;
 
     @media (min-width: $screen-sm) {
