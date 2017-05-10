@@ -260,7 +260,6 @@ body {
   &__item {
     display: block;
     margin: 10px 0;
-    font-size: 16px;
     position: relative;
     color: $color-secondary;
 
@@ -289,7 +288,7 @@ body {
     @media (min-width: $screen-md) {
       display: inline-block;
       margin: 0;
-      padding-bottom: 17px;
+      padding-bottom: 15px;
 
       &--nested:hover::before {
         display: block;
@@ -322,7 +321,7 @@ body {
     @media (min-width: $screen-lg) {
       padding: 11px 14px;
       margin: 0 13px;
-      font-size: 15px;
+      font-size: 16px;
     }
 
     @media (min-width: $screen-xl) {
