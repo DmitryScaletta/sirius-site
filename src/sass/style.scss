@@ -63,14 +63,11 @@ body {
 .header {
   position: relative;
   z-index: 1;
-
-  &__inner {
-    background: #737373;
-  }
+  background: #737373;
 
   &__overlay {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     box-shadow: 0 10px 20px rgba(#000, 0.3);
 
     &::after {
@@ -414,12 +411,12 @@ body {
 .content {
   margin-top: -20px;
   padding-top: 20px;
-  position: relative;
-  z-index: 0;
+  // position: relative;
+  // z-index: 0;
 
   &__inner {
-    position: relative;
-    z-index: 1;
+    // position: relative;
+    // z-index: 1;
   }
 }
 
