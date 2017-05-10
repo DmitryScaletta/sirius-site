@@ -233,7 +233,7 @@ body {
 
   &__nav {
     display: none;
-    padding-bottom: 9px;
+    padding-bottom: 7px;
 
     &--expanded {
       display: block;
@@ -301,7 +301,7 @@ body {
     @media (min-width: $screen-md) {
       display: inline-block;
       margin: 0;
-      padding-bottom: 15px;
+      padding-bottom: 17px;
 
       &--nested:hover::before {
         display: block;
@@ -311,7 +311,7 @@ body {
 
     @media (min-width: $screen-lg) {
       &--nested:hover::before {
-        top: 52px;
+        top: 54px;
       }
     }
   }
