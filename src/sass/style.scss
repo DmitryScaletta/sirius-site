@@ -173,10 +173,8 @@ body {
       padding-left: 30px;
     }
 
-    &--first {
-      .header__phone-code {
-        padding-left: 0;
-      }
+    &--first .header__phone-code {
+      padding-left: 0;
     }
 
     @media (min-width: $screen-xl) {
@@ -184,10 +182,8 @@ body {
         padding-left: 42px;
       }
 
-      &--first {
-        .header__phone-code {
-          padding-left: 12px;
-        }
+      &--first .header__phone-code {
+        padding-left: 12px;
       }
     }
 
@@ -268,61 +264,42 @@ body {
     position: relative;
     color: $color-secondary;
 
-    &:hover {
-      .nav__nested {
-        visibility: visible;
-        opacity: 1;
-      }
+    &:hover .nav__nested {
+      visibility: visible;
+      opacity: 1;
     }
 
-    &--nested {
-      &:hover {
-        &::before {
-          content: "";
-          display: none;
-          position: absolute;
-          left: calc(50% - 5px);
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 5px 5px 0;
-          border-color: $color-secondary transparent transparent;
-        }
-      }
+    &--nested:hover::before {
+      content: "";
+      display: none;
+      position: absolute;
+      left: calc(50% - 5px);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0;
+      border-color: $color-secondary transparent transparent;
     }
 
-    &::after {
+    &::after,
+    &:first-child::before {
       @extend %nav-dot;
     }
 
-    &:first-child {
-      &::before {
-        @extend %nav-dot;
-      }
-    }
-
     @media (min-width: $screen-md) {
-      &--nested {
-        &:hover {
-          &::before {
-            display: block;
-            top: 40px;
-          }
-        }
-      }
-
       display: inline-block;
       margin: 0;
       padding-bottom: 17px;
+
+      &--nested:hover::before {
+        display: block;
+        top: 40px;
+      }
     }
 
     @media (min-width: $screen-lg) {
-      &--nested {
-        &:hover {
-          &::before {
-            top: 52px;
-          }
-        }
+      &--nested:hover::before {
+        top: 52px;
       }
     }
   }
@@ -882,13 +859,12 @@ body {
   &__copyright-wrapper {
     @include grid-column(12, sm 6);
 
+    padding-top: 5px;
     text-align: center;
 
     @media (min-width: $screen-sm) {
       text-align: right;
     }
-
-    padding-top: 5px;
   }
 
   &__copyright-link {
